@@ -16,6 +16,12 @@ As a user
 So that I can improve my grammar
 I want to verify that a text starts with a capital letter and ends with a suitable sentence-ending punctuation mark.
 
+3
+
+As a user
+So that I can keep track of my tasks
+I want to check if a text includes the string #TODO.
+
 ## 2. Design the Method Signature
 
 _Include the name of the method, its parameters, return value, and side effects._
@@ -34,6 +40,13 @@ result = test_sentence(text)
 # result is a boolean that represents if the text is grammatically correct
 ```
 
+3
+```ruby
+todo = check_todo(str)
+
+# str is a string
+# todo is a boolean where true includes #TODO
+```
 
 ## 3. Create Examples as Tests
 
@@ -81,6 +94,27 @@ test_sentence('result is a boolean that represents if the text is grammatically 
 test_sentence('Result is a boolean that represents if the text is grammatically correct.')
 => true
 
+```
+
+```ruby
+check_todo('Hello World')
+# => return false
+check_todo('#TODO Hello World')
+# => return true
+check_todo('Hello #TODO World')
+# => return true
+check_todo('')
+# => return false
+check_todo('# TODO')
+# => return true
+check_todo('#ToDo')
+# => return true
+check_todo('#todo')
+# => return true
+check_todo('#to do')
+# => return false
+check_todo(8)
+# => raise error - NoMethodError
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
