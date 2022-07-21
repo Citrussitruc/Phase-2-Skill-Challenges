@@ -92,7 +92,7 @@ test_sentence('Sentence?!?')
 test_sentence('result is a boolean that represents if the text is grammatically correct')
 # => false
 test_sentence('Result is a boolean that represents if the text is grammatically correct.')
-=> true
+# => true
 
 ```
 
